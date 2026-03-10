@@ -1,0 +1,337 @@
+/* Variáveis de Cores - ADICIONE AQUI AS CORES DO SEU PDF */
+:root {
+    --cor-primaria: #0056b3; /* Exemplo: Azul */
+    --cor-secundaria: #f4f4f4; /* Exemplo: Cinza Claro */
+    --cor-texto: #333333;
+    --cor-fundo: #ffffff;
+    --cor-destaque: #ff9800; /* Exemplo: Laranja para botões */
+}
+.imagem-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Header e Navegação */
+header {
+    background: var(--cor-fundo);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--cor-primaria);
+}
+
+.btn-nav {
+    background: var(--cor-primaria);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x1080'); /* Substitua pela imagem do PDF */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 60px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--cor-destaque);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* Seções Gerais */
+.section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bg-light {
+    background-color: var(--cor-secundaria);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--cor-primaria);
+    font-size: 2.5rem;
+}
+
+/* Grid de Serviços */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Formulário */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+.hero {
+    position: relative;
+    background: url('jpg.jpg') no-repeat center center/cover;
+    height: 90vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;       /* alinhamento vertical no centro */
+    justify-content: center;   /* alinhamento horizontal no centro */
+    padding: 0 20px;           /* padding horizontal para não encostar nas bordas */
+    color: white;
+    box-sizing: border-box;
+    background-position: center 40%; 
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 700px;
+    width: 100%;               /* Para ocupar largura total do container com limite max */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 3rem 3.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;          /* altura adaptativa no mobile */
+        padding: 60px 20px;
+    }
+
+    .hero-content {
+        padding: 2rem 1.5rem;
+        max-width: 90vw;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 900;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+.btn-primary {
+    background-color: #ff9800;
+    color: #fff;
+    font-weight: 700;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e68900;
+    box-shadow: 0 6px 20px rgba(230, 137, 0, 0.85);
+}
+/* Container da seção */
+.bg-light {
+    background-color: var(--cor-secundaria);
+}
+
+/* Grid dos cards */
+.services-grid.icons-top {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Card individual */
+.service-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ícone centralizado no topo */
+.icon {
+    font-size: 3rem;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+/* Título */
+.service-card h3 {
+    font-size: 1.6rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* Descrição */
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
