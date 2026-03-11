@@ -36,3 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.service-card');
+
+  const onScroll = () => {
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) { // quando 85% da janela estiver visível
+        card.classList.add('is-visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', onScroll);
+  onScroll(); // verificar na carga inicial
+});
