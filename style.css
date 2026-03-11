@@ -40,7 +40,7 @@ header {
 @media ( max-width: 768px) {
     header{
         width: 40%;
-        background-color: #e68900;
+        background-color: #f7f6f4;
     }
 
 }
@@ -303,7 +303,7 @@ footer {
 
 .btn-primary:hover {
     background-color: #30adf5;
-    box-shadow: 0 6px 20px rgba(16, 185, 252, 0.85);
+    box-shadow: 0 10px 20px rgba(5, 165, 228, 0.342);
 }
 /* Container da seção */
 .bg-light {
@@ -382,7 +382,7 @@ footer {
 
 /* Efeito de hover para dar feedback ao usuário */
 .service-card:hover {
-  box-shadow: 0 12px 20px rgba(0, 86, 179, 0.3);
+  box-shadow: 0 18px 24px rgba(12, 26, 216, 0.479);
   transform: translateY(-5px);
   transition: all 0.3s ease;
   cursor: pointer;
@@ -409,7 +409,7 @@ footer {
 
 .icon {
   font-size: 3rem;
-  color: #ffb600; /* amarelo vibrante igual imagem */
+  color: #0400ff; /* amarelo vibrante igual imagem */
   margin-bottom: 20px;
 }
 
