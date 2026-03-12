@@ -36,18 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
     });
 });
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.service-card');
 
-  const onScroll = () => {
-    cards.forEach(card => {
-      const rect = card.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.85) { // quando 85% da janela estiver visível
-        card.classList.add('is-visible');
-      }
-    });
-  };
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = [...document.querySelectorAll('.service-card')];
 
-  window.addEventListener('scroll', onScroll);
-  onScroll(); // verificar na carga inicial
-});
+    function checkVisibility() {
+      const windowHeight = window.innerHeight;
+      cards.forEach((card, index) => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < windowHeight * 0.9) {
+          // Delay diferenciado para cascata
+          setTimeout(() => {
+            card.classList.add('is-visible');
+          }, index * 150);
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
+  });
+

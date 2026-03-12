@@ -424,3 +424,124 @@ footer {
   color: #073763; /* Azul mais suave para o texto */
   line-height: 1.5;
 }
+.services-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.services-section h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: var(--cor-primaria, #2f21b9);
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Grid com espaçamento */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+/* Card individual */
+.service-card {
+  background: rgba(163, 166, 167, 0.267);
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  cursor: pointer;
+  transition: 
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(40px);
+  outline-offset: 3px;
+  outline-color: #1e11d188;
+}
+
+/* Aparece com fade-in e subida */
+.service-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover e foco */
+.service-card:hover,
+.service-card:focus {
+  box-shadow: 0 16px 40px rgba(5, 19, 223, 0.514);
+  transform: translateY(-10px) rotate(-1.5deg) scale(1.05);
+  outline: none;
+}
+
+/* Círculo da imagem */
+.icon-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #f0f4ff;
+  box-shadow: 0 6px 15px rgba(20, 5, 231, 0.534);
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.35s ease;
+}
+
+.service-card:hover .icon-circle,
+.service-card:focus .icon-circle {
+  box-shadow: 0 12px 30px rgba(10, 24, 226, 0.514);
+}
+
+/* Imagem dentro do círculo */
+.icon-circle img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+  user-select: none;
+}
+
+/* Título */
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: var(--cor-primaria, #2f21b9);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Parágrafo */
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  user-select: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .icon-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-circle img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
